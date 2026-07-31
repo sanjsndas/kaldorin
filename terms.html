@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Use · Kaldorin Wildthicket garden journal</title>
+  <meta name="description" content="Terms of Use for Kaldorin Wildthicket – the legal framework for our garden journal.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    /* ----- reset & base (same as main) ----- */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #f6f3ed;
+      color: #1e2a2b;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+      padding: 2rem 1.5rem;
+    }
+    .container { max-width: 1280px; margin: 0 auto; }
+
+    /* ----- brand identity : Kaldorin Wildthicket ----- */
+    :root {
+      --ink: #1e2a2b;
+      --paper: #f6f3ed;
+      --moss: #5b7a5c;
+      --lichen: #a9b78b;
+      --peat: #4d3e35;
+      --silk: #e2dcd0;
+      --cream: #f0ebe0;
+      --gold: #b99b6b;
+      --shadow-sm: 0 6px 18px rgba(30, 42, 43, 0.06);
+      --shadow-md: 0 16px 40px rgba(30, 42, 43, 0.08);
+      --radius-card: 24px 8px 24px 8px;
+      --radius-soft: 40px 12px 40px 12px;
+    }
+
+    /* ----- typography ----- */
+    h1, h2, h3, h4, .logo, .nav-link, .card-category, .btn {
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+    h1 { font-size: 3.2rem; font-weight: 700; line-height: 1.1; }
+    h2 { font-size: 2.4rem; font-weight: 600; letter-spacing: -0.01em; }
+    h3 { font-size: 1.6rem; font-weight: 600; }
+    body, .article-body, .meta, .footer-text {
+      font-family: 'Merriweather', serif;
+      font-weight: 400;
+    }
+    .logo { font-size: 2.2rem; font-weight: 700; letter-spacing: -0.04em; color: var(--ink); }
+    .logo span { color: var(--moss); font-weight: 300; }
+
+    /* ----- navigation (floating bridge) ----- */
+    .nav-bridge {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.2rem 2rem;
+      background: rgba(246, 243, 237, 0.7);
+      backdrop-filter: blur(6px);
+      border-radius: 80px 16px 80px 16px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 3rem;
+      border: 1px solid rgba(91, 122, 92, 0.15);
+    }
+    .nav-links {
+      display: flex;
+      gap: 2.2rem;
+      flex-wrap: wrap;
+    }
+    .nav-link {
+      text-decoration: none;
+      color: var(--ink);
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 0.4rem 0;
+      border-bottom: 2px solid transparent;
+      transition: 0.2s;
+    }
+    .nav-link:hover { border-bottom-color: var(--moss); color: var(--peat); }
+    .nav-utility { display: flex; gap: 1.2rem; align-items: center; }
+
+    /* ----- Terms specific: legal compass (hero) ----- */
+    .terms-hero {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 2.5rem;
+      margin-bottom: 4.5rem;
+      background: var(--cream);
+      padding: 2.8rem 3rem;
+      border-radius: var(--radius-soft);
+      box-shadow: var(--shadow-sm);
+      border-left: 8px solid var(--gold);
+    }
+    .terms-hero h1 { margin-bottom: 0.8rem; }
+    .terms-hero .lead {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: var(--peat);
+      border-left: 4px solid var(--lichen);
+      padding-left: 1.2rem;
+    }
+    .terms-meta { display: flex; gap: 1.5rem; margin-top: 1.5rem; flex-wrap: wrap; }
+    .pill { background: var(--silk); padding: 0.3rem 1.2rem; border-radius: 40px; font-size: 0.8rem; font-weight: 600; color: var(--peat); }
+    .terms-image {
+      background: #d9d0c0;
+      border-radius: var(--radius-card);
+      min-height: 200px;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300"><rect width="400" height="300" fill="%23b7aa95" /><circle cx="120" cy="100" r="50" fill="%235b7a5c" opacity="0.3"/><circle cx="280" cy="180" r="60" fill="%23b99b6b" opacity="0.25"/><path d="M80 220 L200 140 L320 220" stroke="%23e2dcd0" stroke-width="8" fill="none"/><text x="135" y="160" font-family="Quicksand" font-size="22" fill="%234d3e35" opacity="0.6">terms</text></svg>');
+      background-size: cover;
+      background-blend-mode: overlay;
+    }
+
+    /* ----- legal weave (cards for key points) ----- */
+    .legal-weave {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-bottom: 4rem;
+    }
+    .legal-card {
+      background: white;
+      padding: 2rem 1.8rem 1.8rem;
+      border-radius: 40px 8px 40px 8px;
+      box-shadow: var(--shadow-sm);
+      transition: 0.2s;
+      border: 1px solid rgba(169, 183, 139, 0.2);
+    }
+    .legal-card:nth-child(2) { border-radius: 8px 40px 8px 40px; background: var(--cream); }
+    .legal-card:nth-child(3) { border-radius: 32px 0 32px 0; background: #ede8de; }
+    .legal-card .card-category {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--moss);
+      border-bottom: 2px solid var(--lichen);
+      display: inline-block;
+      padding-bottom: 0.3rem;
+    }
+    .legal-card h3 { margin: 0.8rem 0 0.5rem; }
+    .legal-card .excerpt { font-size: 0.95rem; color: var(--peat); }
+
+    /* ----- full terms text (deep dive) ----- */
+    .terms-full {
+      background: var(--silk);
+      padding: 2.8rem 3rem;
+      border-radius: 80px 8px 80px 8px;
+      margin-bottom: 4rem;
+      box-shadow: var(--shadow-md);
+    }
+    .terms-full h2 { margin-bottom: 1.2rem; border-bottom: 2px solid var(--gold); padding-bottom: 0.5rem; }
+    .terms-full h3 { margin-top: 1.8rem; margin-bottom: 0.5rem; color: var(--peat); }
+    .terms-full p { margin-bottom: 1rem; font-size: 0.98rem; }
+    .terms-full ul { margin-left: 1.8rem; margin-bottom: 1.2rem; }
+    .terms-full li { margin-bottom: 0.3rem; }
+
+    /* ----- library section (summary table / quick ref) ----- */
+    .library-section {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 2.5rem;
+      margin-bottom: 4rem;
+      background: white;
+      padding: 2rem 2.5rem;
+      border-radius: 12px 60px 12px 60px;
+      box-shadow: var(--shadow-sm);
+    }
+    .library-section table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+    .library-section th {
+      text-align: left;
+      padding: 0.6rem 0.2rem;
+      border-bottom: 2px solid var(--lichen);
+      font-weight: 600;
+    }
+    .library-section td { padding: 0.6rem 0.2rem; border-bottom: 1px solid #ddd; }
+    .faq-block { background: var(--cream); padding: 1.2rem 1.8rem; border-radius: 40px 8px 40px 8px; }
+    .faq-block details { margin: 0.8rem 0; }
+    .faq-block summary { font-weight: 600; cursor: pointer; color: var(--peat); }
+
+    /* ----- footer driftwood (same) ----- */
+    .footer-drift {
+      margin-top: 4rem;
+      padding: 2.8rem 2rem 1.8rem;
+      background: #1e2a2b;
+      color: #d4d9d0;
+      border-radius: 80px 0 80px 0;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 2rem;
+    }
+    .footer-drift a { color: #b7c9b2; text-decoration: none; border-bottom: 1px dotted #5b7a5c; }
+    .footer-drift .logo { color: #e2dcd0; }
+    .footer-drift .logo span { color: #a9b78b; }
+    .footer-links { display: flex; flex-direction: column; gap: 0.4rem; }
+    .footer-links a { border-bottom: 0; }
+
+    /* responsive */
+    @media (max-width: 800px) {
+      .terms-hero, .library-section { grid-template-columns: 1fr; }
+      .legal-weave { grid-template-columns: 1fr; }
+      .footer-drift { grid-template-columns: 1fr 1fr; }
+      .nav-bridge { flex-direction: column; gap: 1rem; align-items: flex-start; }
+    }
+    @media (max-width: 500px) {
+      .footer-drift { grid-template-columns: 1fr; }
+      h1 { font-size: 2.4rem; }
+    }
+
+    .btn-outline {
+      border: 1px solid var(--moss);
+      padding: 0.4rem 1.2rem;
+      border-radius: 40px;
+      background: transparent;
+      font-weight: 600;
+      color: var(--moss);
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn-outline:hover { background: var(--moss); color: white; }
+    .text-small { font-size: 0.8rem; color: var(--peat); }
+    .mt-1 { margin-top: 1rem; }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- nav bridge (exactly as main) -->
+  <nav class="nav-bridge">
+    <div class="logo">Kaldorin<span>Wildthicket Residence</span></div>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="terms.html" class="nav-link" style="border-bottom-color: var(--moss);">Terms Of Privacy</a>
+      <a href="privacy.html" class="nav-link">Privacy Policy</a>
+      <a href="cookies.html" class="nav-link">Cookies Policy</a>
+      <a href="categories.html" class="nav-link">CATEGORIES</a>
+      <a href="disclamier.html" class="nav-link">DISCLAMIER</a>
+    </div>
+  </nav>
+
+  <!-- 1. terms hero (compass) -->
+  <section class="terms-hero">
+    <div>
+      <h1>terms of use</h1>
+      <div class="lead">Ground rules for wandering through the Wildthicket — read before you roam.</div>
+      <div class="terms-meta">
+        <span class="pill">effective: 1 jan 2026</span>
+        <span class="pill">garden law</span>
+        <span class="pill">version 2.1</span>
+      </div>
+      <p style="margin-top: 1.2rem; font-size: 0.95rem;">By entering Kaldorin Wildthicket, you agree to tread lightly, respect the soil, and honour the words planted here. These terms are our boundary — not a wall, but a hedgerow.</p>
+      <a href="#full-terms" class="btn-outline" style="margin-top: 1.2rem;">read the full terms ↓</a>
+    </div>
+    <div class="terms-image"></div>
+  </section>
+
+  <!-- 2. legal weave (key points) -->
+  <div class="section-title">⚖️ our legal hedgerow <small>– the essentials</small></div>
+  <div class="legal-weave">
+    <div class="legal-card">
+      <div class="card-category">intellectual property</div>
+      <h3>seeds & sentences</h3>
+      <div class="excerpt">All content — text, illustrations, and design — is the property of Kaldorin Wildthicket. You may share a cutting, but not transplant the whole garden.</div>
+    </div>
+    <div class="legal-card">
+      <div class="card-category">user conduct</div>
+      <h3>walk with care</h3>
+      <div class="excerpt">We welcome thoughtful dialogue. Harassment, spam, or commercial scraping will be met with a firm gate-closing.</div>
+    </div>
+    <div class="legal-card">
+      <div class="card-category">liability</div>
+      <h3>gardening at your own risk</h3>
+      <div class="excerpt">Our advice is offered in good faith, but the soil varies. We are not responsible for how you apply our knowledge — be wise, be curious.</div>
+    </div>
+  </div>
+
+  <!-- 3. full terms (deep dive) -->
+  <section id="full-terms" class="terms-full">
+    <h2>📜 full terms of use</h2>
+    <p><strong>Last updated:</strong> 1 January 2026</p>
+    <p>Welcome to Kaldorin Wildthicket. These Terms of Use form a legal agreement between you and the Wildthicket collective. By accessing or using our website, you accept these terms. If you do not agree, please leave the garden quietly.</p>
+
+    <h3>1. intellectual property</h3>
+    <p>All content on this site — including articles, illustrations, typography, and code — is protected by copyright and other intellectual property laws. You may quote short excerpts (up to 100 words) with attribution, but you may not reproduce, distribute, or create derivative works without explicit permission. For permissions, contact us via our <a href="contact.html" style="color: var(--moss);">contact page</a>.</p>
+
+    <h3>2. user obligations</h3>
+    <p>When engaging with our community (comments, forums, or social channels), you agree to:</p>
+    <ul>
+      <li>Respect other participants — no abusive, defamatory, or discriminatory language.</li>
+      <li>Stay on topic — we value deep, relevant dialogue.</li>
+      <li>Not use the site for commercial solicitation or data harvesting.</li>
+    </ul>
+
+    <h3>3. disclaimer of warranties</h3>
+    <p>The content on Kaldorin Wildthicket is provided for informational and educational purposes only. While we strive for accuracy, we make no guarantees about the completeness, reliability, or suitability of any information. Gardening practices vary by climate, soil, and context — always consult local experts.</p>
+
+    <h3>4. limitation of liability</h3>
+    <p>To the fullest extent permitted by law, Kaldorin Wildthicket and its contributors shall not be liable for any damages arising from the use of, or inability to use, our website or content. This includes direct, indirect, incidental, or consequential damages.</p>
+
+    <h3>5. external links</h3>
+    <p>We occasionally link to external resources. These are provided for convenience, but we do not endorse or assume responsibility for their content. Proceed with the same caution you would in an unfamiliar forest.</p>
+
+    <h3>6. modifications</h3>
+    <p>We reserve the right to update these Terms at any time. Changes will be posted here, with an updated effective date. Your continued use of the site constitutes acceptance of the revised Terms.</p>
+
+    <h3>7. governing law</h3>
+    <p>These Terms are governed by the laws of the land where our roots are deepest (the United Kingdom). Any disputes shall be resolved in the courts of that jurisdiction.</p>
+
+    <p style="margin-top: 2rem; border-top: 2px solid var(--gold); padding-top: 1rem;">If you have questions about these Terms, please <a href="contact.html" style="color: var(--moss);">reach out</a> — we’re here to clarify, not confuse.</p>
+  </section>
+
+  <!-- 4. library section: quick reference & faq -->
+  <section class="library-section">
+    <div>
+      <h3 style="font-size: 1.4rem;">📋 quick reference</h3>
+      <p class="text-small">summary of key clauses</p>
+      <table>
+        <tr><th>section</th><th>summary</th></tr>
+        <tr><td>IP</td><td>All content is owned by Wildthicket; limited quoting allowed.</td></tr>
+        <tr><td>Conduct</td><td>Respectful dialogue, no spam or scraping.</td></tr>
+        <tr><td>Liability</td><td>Information is for guidance; use at your own risk.</td></tr>
+        <tr><td>External links</td><td>Not endorsed; click with awareness.</td></tr>
+      </table>
+      <div style="margin-top: 1.2rem; background: #ede8de; padding: 0.8rem 1.2rem; border-radius: 30px 4px 30px 4px;">
+        <span style="font-weight: 600;">📌 acceptance:</span> By using this site, you accept these terms in full.
+      </div>
+    </div>
+    <div class="faq-block">
+      <h4 style="font-weight: 600; margin-bottom: 0.6rem;">❓ terms FAQ</h4>
+      <details><summary>Can I share an article on social media?</summary><p style="font-size: 0.9rem; margin-top: 0.3rem;">Yes — sharing with attribution is encouraged. Please do not republish the entire article without permission.</p></details>
+      <details><summary>What counts as "commercial use"?</summary><p style="font-size: 0.9rem; margin-top: 0.3rem;">Any use that generates revenue or promotes a commercial entity. For licensing, please contact us.</p></details>
+      <details><summary>Do you collect personal data?</summary><p style="font-size: 0.9rem; margin-top: 0.3rem;">We collect minimal data (e.g., comments). Please see our <a href="privacy.html" style="color: var(--moss);">Privacy Policy</a> for full details.</p></details>
+    </div>
+  </section>
+
+  <!-- 5. footer driftwood (same as main) -->
+  <footer class="footer-drift">
+    <div>
+      <div class="logo">Kaldorin<span>Wildthicket</span></div>
+      <p style="font-size: 0.85rem; margin-top: 0.5rem; max-width: 260px;">A sanctuary for those who garden with their senses. Handcrafted content, minimal imagery, maximum wisdom.</p>
+      <div style="margin-top: 1rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+        <span>📍 rooted in the wild</span>
+        <span>✉️ cultivate@wildthicket.com</span>
+      </div>
+    </div>
+    <div class="footer-links">
+      <span style="font-weight: 600; color: #cbd9c0;">Pages</span>
+      <a href="#">Home</a><a href="#">Blog</a><a href="#">Categories</a><a href="#">About</a><a href="#">Contact</a>
+    </div>
+    <div class="footer-links">
+      <span style="font-weight: 600; color: #cbd9c0;">Legal</span>
+      <a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a><a href="#">Disclaimer</a><a href="#">Editorial Policy</a>
+    </div>
+    <div class="footer-links">
+      <span style="font-weight: 600; color: #cbd9c0;">Archive</span>
+      <a href="#">Authors</a><a href="#">Resources</a><a href="#">FAQ</a><a href="#">Sitemap</a>
+      <span style="font-size: 0.7rem; color: #7a8f7a; margin-top: 0.5rem;">© 2026 Kaldorin Wildthicket</span>
+    </div>
+  </footer>
+
+  <!-- inline sitemap (same as main) -->
+  <div style="margin-top: 1.8rem; padding: 0.6rem 0; border-top: 2px solid var(--silk); display: flex; flex-wrap: wrap; gap: 0.8rem 1.8rem; font-size: 0.75rem;">
+    <span>📄 sitemap: </span>
+    <a href="#" style="color: var(--moss);">Home</a>
+    <a href="#" style="color: var(--moss);">Blog</a>
+    <a href="#" style="color: var(--moss);">Categories</a>
+    <a href="#" style="color: var(--moss);">About</a>
+    <a href="#" style="color: var(--moss);">Contact</a>
+    <a href="#" style="color: var(--moss);">Privacy</a>
+    <a href="#" style="color: var(--moss);">Terms</a>
+    <a href="#" style="color: var(--moss);">Cookie Policy</a>
+    <a href="#" style="color: var(--moss);">Disclaimer</a>
+    <a href="#" style="color: var(--moss);">Editorial Policy</a>
+    <a href="#" style="color: var(--moss);">Authors</a>
+    <a href="#" style="color: var(--moss);">Archive</a>
+    <a href="#" style="color: var(--moss);">Resources</a>
+    <a href="#" style="color: var(--moss);">FAQ</a>
+    <a href="#" style="color: var(--moss);">Sitemap</a>
+  </div>
+
+</div>
+<!-- end container -->
+</body>
+</html>

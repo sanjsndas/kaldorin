@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kaldorin Wildthicket · Disclaimer</title>
+  <meta name="description" content="Disclaimer for Kaldorin Wildthicket — clarity, honesty, and a touch of woodland wisdom." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    /* ----- reset & base (same as main) ----- */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #f6f3ed;
+      color: #1e2a2b;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+      padding: 2rem 1.5rem;
+    }
+    .container { max-width: 1280px; margin: 0 auto; }
+
+    /* ----- brand identity : Kaldorin Wildthicket ----- */
+    :root {
+      --ink: #1e2a2b;
+      --paper: #f6f3ed;
+      --moss: #5b7a5c;
+      --lichen: #a9b78b;
+      --peat: #4d3e35;
+      --silk: #e2dcd0;
+      --cream: #f0ebe0;
+      --gold: #b99b6b;
+      --shadow-sm: 0 6px 18px rgba(30, 42, 43, 0.06);
+      --shadow-md: 0 16px 40px rgba(30, 42, 43, 0.08);
+      --radius-card: 24px 8px 24px 8px;
+      --radius-soft: 40px 12px 40px 12px;
+    }
+
+    /* ----- typography ----- */
+    h1, h2, h3, h4, .logo, .nav-link, .card-category, .btn {
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+    h1 { font-size: 3.2rem; font-weight: 700; line-height: 1.1; }
+    h2 { font-size: 2.4rem; font-weight: 600; letter-spacing: -0.01em; }
+    h3 { font-size: 1.6rem; font-weight: 600; }
+    body, .article-body, .meta, .footer-text {
+      font-family: 'Merriweather', serif;
+      font-weight: 400;
+    }
+    .logo { font-size: 2.2rem; font-weight: 700; letter-spacing: -0.04em; color: var(--ink); }
+    .logo span { color: var(--moss); font-weight: 300; }
+
+    /* ----- navigation (floating bridge) ----- */
+    .nav-bridge {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.2rem 2rem;
+      background: rgba(246, 243, 237, 0.7);
+      backdrop-filter: blur(6px);
+      border-radius: 80px 16px 80px 16px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 3rem;
+      border: 1px solid rgba(91, 122, 92, 0.15);
+    }
+    .nav-links {
+      display: flex;
+      gap: 2.2rem;
+      flex-wrap: wrap;
+    }
+    .nav-link {
+      text-decoration: none;
+      color: var(--ink);
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 0.4rem 0;
+      border-bottom: 2px solid transparent;
+      transition: 0.2s;
+    }
+    .nav-link:hover { border-bottom-color: var(--moss); color: var(--peat); }
+    .nav-link.active { border-bottom-color: var(--moss); }
+
+    /* ----- privacy grid layout (mirrored for disclaimer) ----- */
+    .privacy-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 3rem;
+      margin-bottom: 4rem;
+    }
+
+    .privacy-main {
+      background: white;
+      padding: 2.8rem 3rem;
+      border-radius: 60px 12px 60px 12px;
+      box-shadow: var(--shadow-sm);
+      border-right: 8px solid var(--moss);
+    }
+    .privacy-main h2 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: var(--peat);
+    }
+    .privacy-main .subhead {
+      color: var(--peat);
+      font-size: 0.95rem;
+      margin-bottom: 2rem;
+      border-left: 4px solid var(--lichen);
+      padding-left: 1rem;
+    }
+    .privacy-section {
+      margin-bottom: 2rem;
+    }
+    .privacy-section h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--moss);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .privacy-section p {
+      margin-bottom: 0.6rem;
+      font-size: 0.95rem;
+      color: #2d3a3b;
+    }
+    .privacy-section ul {
+      padding-left: 1.8rem;
+      margin: 0.5rem 0 1rem;
+    }
+    .privacy-section ul li {
+      margin-bottom: 0.3rem;
+      font-size: 0.92rem;
+    }
+    .highlight-box {
+      background: var(--cream);
+      padding: 1.2rem 1.8rem;
+      border-radius: 40px 8px 40px 8px;
+      margin: 1.5rem 0;
+      border-left: 6px solid var(--gold);
+    }
+    .badge-pill {
+      background: var(--silk);
+      padding: 0.25rem 1rem;
+      border-radius: 40px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--peat);
+      display: inline-block;
+      margin-top: 0.3rem;
+    }
+
+    /* right sidebar: quick info + contact */
+    .privacy-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .sidebar-card {
+      background: var(--cream);
+      padding: 2rem 2rem;
+      border-radius: 12px 60px 12px 60px;
+      box-shadow: var(--shadow-sm);
+    }
+    .sidebar-card h4 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--peat);
+      margin-bottom: 0.8rem;
+      border-bottom: 2px dashed var(--lichen);
+      padding-bottom: 0.5rem;
+    }
+    .sidebar-card p, .sidebar-card address {
+      font-style: normal;
+      font-size: 0.9rem;
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+    }
+    .sidebar-card a {
+      color: var(--moss);
+      text-decoration: none;
+      border-bottom: 1px dotted var(--lichen);
+    }
+    .btn-outline {
+      border: 1px solid var(--moss);
+      padding: 0.4rem 1.2rem;
+      border-radius: 40px;
+      background: transparent;
+      font-weight: 600;
+      color: var(--moss);
+      text-decoration: none;
+    }
+    .btn-outline:hover { background: var(--moss); color: white; }
+    .pill {
+      background: var(--silk);
+      padding: 0.3rem 1.2rem;
+      border-radius: 40px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--peat);
+    }
+
+    /* ----- footer & reused components ----- */
+    .footer-drift {
+      margin-top: 4rem;
+      padding: 2.8rem 2rem 1.8rem;
+      background: #1e2a2b;
+      color: #d4d9d0;
+      border-radius: 80px 0 80px 0;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 2rem;
+    }
+    .footer-drift a { color: #b7c9b2; text-decoration: none; border-bottom: 1px dotted #5b7a5c; }
+    .footer-drift .logo { color: #e2dcd0; }
+    .footer-drift .logo span { color: #a9b78b; }
+    .footer-links { display: flex; flex-direction: column; gap: 0.4rem; }
+    .footer-links a { border-bottom: 0; }
+
+    /* responsive */
+    @media (max-width: 800px) {
+      .privacy-grid { grid-template-columns: 1fr; }
+      .footer-drift { grid-template-columns: 1fr 1fr; }
+      .nav-bridge { flex-direction: column; gap: 1rem; align-items: flex-start; }
+      .privacy-main { padding: 1.8rem; }
+    }
+    @media (max-width: 500px) {
+      .footer-drift { grid-template-columns: 1fr; }
+      h1 { font-size: 2.4rem; }
+    }
+    .text-small { font-size: 0.8rem; color: var(--peat); }
+    .mt-1 { margin-top: 1rem; }
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.8rem;
+      display: flex;
+      align-items: baseline;
+      gap: 0.8rem;
+    }
+    .section-title small {
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: var(--moss);
+      letter-spacing: 0;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- nav bridge (same as main) -->
+  <nav class="nav-bridge">
+    <div class="logo">Kaldorin<span>Wildthicket Residence</span></div>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="terms.html" class="nav-link">Terms Of Privacy</a>
+      <a href="privacy.html" class="nav-link">Privacy Policy</a>
+      <a href="cookies.html" class="nav-link">Cookies Policy</a>
+      <a href="categories.html" class="nav-link">Categories</a>
+      <a href="disclaimer.html" class="nav-link active">Disclaimer</a>
+    </div>
+  </nav>
+
+  <!-- page header -->
+  <div style="margin-bottom: 2.5rem;">
+    <h1 style="font-size: 2.8rem;">⚖️ disclaimer</h1>
+    <p style="font-size: 1.1rem; color: var(--peat); max-width: 700px; border-left: 4px solid var(--lichen); padding-left: 1.2rem;">
+      Honest words, rooted in the earth. This disclaimer sets the ground rules for our shared garden.
+    </p>
+  </div>
+
+  <!-- disclaimer grid: main content + sidebar -->
+  <div class="privacy-grid">
+
+    <!-- main disclaimer content -->
+    <div class="privacy-main">
+      <h2>general disclaimer</h2>
+      <div class="subhead">Last updated: 22 July 2026 · Kaldorin Wildthicket</div>
+
+      <div class="privacy-section">
+        <h3>🌱 1. informational purposes only</h3>
+        <p>The content on Kaldorin Wildthicket is provided for general information and entertainment purposes only. While we strive to keep the information accurate and up to date, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability of the content.</p>
+        <div class="highlight-box">
+          <p>✨ <strong>Always consult a qualified professional</strong> for specific advice related to gardening, health, legal, or financial matters. Our words are seeds — plant them with care.</p>
+        </div>
+      </div>
+
+      <div class="privacy-section">
+        <h3>🌿 2. external links & third parties</h3>
+        <p>Our site may contain links to external websites that are not controlled or maintained by Kaldorin Wildthicket. We do not endorse, guarantee, or assume responsibility for the content, privacy practices, or accuracy of any third-party sites.</p>
+        <ul>
+          <li>We are not liable for any loss or damage arising from your use of external links.</li>
+          <li>Always review the privacy policies and terms of any third-party site you visit.</li>
+        </ul>
+      </div>
+
+      <div class="privacy-section">
+        <h3>🍂 3. personal responsibility</h3>
+        <p>Any action you take based on the information found on this website is strictly at your own risk. Kaldorin Wildthicket will not be liable for any losses, injuries, or damages arising from the use of our content.</p>
+        <p>We encourage you to exercise your own judgment and consult with relevant professionals when necessary.</p>
+      </div>
+
+      <div class="privacy-section">
+        <h3>📜 4. content accuracy & updates</h3>
+        <p>We occasionally update our content to reflect new insights, seasonal changes, or corrections. However, we do not guarantee that all information is current at all times. If you find an error, please <a href="contact.html" style="color: var(--moss);">let us know</a> — we appreciate the helping hand.</p>
+        <p style="margin-top: 0.5rem;"><span class="badge-pill">effective 22 July 2026</span></p>
+      </div>
+
+      <div class="privacy-section">
+        <h3>🖋️ 5. affiliate & advertising disclosure</h3>
+        <p>We believe in transparency. Currently, Kaldorin Wildthicket does not participate in affiliate marketing or display third-party advertisements. If that changes, we will clearly disclose all commercial relationships.</p>
+        <p>Any product recommendations are based on genuine experience and personal affinity — not compensation.</p>
+      </div>
+    </div>
+
+    <!-- sidebar: quick info, contact, summary -->
+    <div class="privacy-sidebar">
+      <div class="sidebar-card">
+        <h4>📌 at a glance</h4>
+        <ul style="list-style: none; padding: 0; font-size: 0.9rem; margin-top: 0.5rem;">
+          <li style="padding: 0.3rem 0; border-bottom: 1px dotted var(--silk);">✅ Informational only</li>
+          <li style="padding: 0.3rem 0; border-bottom: 1px dotted var(--silk);">✅ No legal or financial advice</li>
+          <li style="padding: 0.3rem 0; border-bottom: 1px dotted var(--silk);">✅ External links not endorsed</li>
+          <li style="padding: 0.3rem 0; border-bottom: 1px dotted var(--silk);">✅ Use at your own risk</li>
+          <li style="padding: 0.3rem 0;">✅ No affiliate ties</li>
+        </ul>
+        <p style="margin-top: 1rem; font-size: 0.85rem; color: var(--peat);">We always aim for clarity — if something is unclear, please ask.</p>
+      </div>
+
+      <div class="sidebar-card" style="background: white; border: 1px solid var(--silk);">
+        <h4>📬 contact the guardian</h4>
+        <p>Questions about this disclaimer? Reach out to our stewardship team.</p>
+        <address>
+          Kaldorin Wildthicket<br />
+          42 Moss Lane, Elderwood Valley<br />
+          W3 9TH, UK
+        </address>
+        <p>✉️ <a href="mailto:cultivate@wildthicket.com">cultivate@wildthicket.com</a></p>
+        <p>📞 +44 (0) 20 7946 0923</p>
+        <p style="margin-top: 0.8rem;"><a href="contact.html" class="btn-outline" style="display: inline-block; padding: 0.5rem 1.8rem;">send a letter →</a></p>
+      </div>
+
+      <div class="sidebar-card" style="background: var(--silk);">
+        <h4>📖 editorial integrity</h4>
+        <p>We hold ourselves to high standards of honesty and transparency. Our editorial policy is guided by curiosity, kindness, and a deep respect for the natural world.</p>
+        <p><span class="badge-pill" style="background: var(--moss); color: white;">read our editorial policy</span></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- trust signal -->
+  <div style="background: var(--cream); padding: 1.2rem 2rem; border-radius: 80px 8px 80px 8px; margin-bottom: 2rem; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;">
+    <span style="font-weight: 600; color: var(--peat);">🌿 we believe in: transparency · minimal data · human connection</span>
+    <span style="display: flex; gap: 1rem; flex-wrap: wrap;">
+      <span class="pill">no legal advice</span>
+      <span class="pill" style="background: var(--gold); color: white;">always consult a pro</span>
+    </span>
+  </div>
+
+  <!-- footer driftwood (same as main) -->
+  <footer class="footer-drift">
+    <div>
+      <div class="logo">Kaldorin<span>Wildthicket</span></div>
+      <p style="font-size: 0.85rem; margin-top: 0.5rem; max-width: 260px;">A sanctuary for those who garden with their senses. Handcrafted content, minimal imagery, maximum wisdom.</p>
+      <div style="margin-top: 1rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+        <span>📍 rooted in the wild</span>
+        <span>✉️ cultivate@wildthicket.com</span>
+      </div>
+    </div>
+    <div class="footer-links">
+      <span style="font-weight: 600; color: #cbd9c0;">Pages</span>
+      <a href="#">Home</a><a href="#">Blog</a><a href="#">Categories</a><a href="#">About</a><a href="#">Contact</a>
+    </div>
+    <div class="footer-links">
+      <span style="font-weight: 600; color: #cbd9c0;">Legal</span>
+      <a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a><a href="#">Disclaimer</a><a href="#">Editorial Policy</a>
+    </div>
+    <div class="footer-links">
+      <span style="font-weight: 600; color: #cbd9c0;">Archive</span>
+      <a href="#">Authors</a><a href="#">Resources</a><a href="#">FAQ</a><a href="#">Sitemap</a>
+      <span style="font-size: 0.7rem; color: #7a8f7a; margin-top: 0.5rem;">© 2026 Kaldorin Wildthicket</span>
+    </div>
+  </footer>
+
+  <!-- sitemap inline -->
+  <div style="margin-top: 1.8rem; padding: 0.6rem 0; border-top: 2px solid var(--silk); display: flex; flex-wrap: wrap; gap: 0.8rem 1.8rem; font-size: 0.75rem;">
+    <span>📄 sitemap: </span>
+    <a href="#" style="color: var(--moss);">Home</a>
+    <a href="#" style="color: var(--moss);">Blog</a>
+    <a href="#" style="color: var(--moss);">Categories</a>
+    <a href="#" style="color: var(--moss);">About</a>
+    <a href="#" style="color: var(--moss);">Contact</a>
+    <a href="#" style="color: var(--moss);">Privacy</a>
+    <a href="#" style="color: var(--moss);">Terms</a>
+    <a href="#" style="color: var(--moss);">Cookie Policy</a>
+    <a href="#" style="color: var(--moss);">Disclaimer</a>
+    <a href="#" style="color: var(--moss);">Editorial Policy</a>
+    <a href="#" style="color: var(--moss);">Authors</a>
+    <a href="#" style="color: var(--moss);">Archive</a>
+    <a href="#" style="color: var(--moss);">Resources</a>
+    <a href="#" style="color: var(--moss);">FAQ</a>
+    <a href="#" style="color: var(--moss);">Sitemap</a>
+  </div>
+
+</div>
+<!-- end container -->
+</body>
+</html>

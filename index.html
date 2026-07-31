@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kaldorin Wildthicket · garden authority</title>
+  <meta name="description" content="Kaldorin Wildthicket – a handcrafted garden journal for the curious cultivator. Deep knowledge, minimal imagery, premium reading experience.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    /* ----- reset & base ----- */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #f6f3ed;
+      color: #1e2a2b;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+      padding: 2rem 1.5rem;
+    }
+    .container { max-width: 1280px; margin: 0 auto; }
+
+    /* ----- brand identity : Kaldorin Wildthicket ----- */
+    :root {
+      --ink: #1e2a2b;
+      --paper: #f6f3ed;
+      --moss: #5b7a5c;
+      --lichen: #a9b78b;
+      --peat: #4d3e35;
+      --silk: #e2dcd0;
+      --cream: #f0ebe0;
+      --gold: #b99b6b;
+      --shadow-sm: 0 6px 18px rgba(30, 42, 43, 0.06);
+      --shadow-md: 0 16px 40px rgba(30, 42, 43, 0.08);
+      --radius-card: 24px 8px 24px 8px;
+      --radius-soft: 40px 12px 40px 12px;
+    }
+
+    /* ----- typography ----- */
+    h1, h2, h3, h4, .logo, .nav-link, .card-category, .btn {
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+    h1 { font-size: 3.2rem; font-weight: 700; line-height: 1.1; }
+    h2 { font-size: 2.4rem; font-weight: 600; letter-spacing: -0.01em; }
+    h3 { font-size: 1.6rem; font-weight: 600; }
+    body, .article-body, .meta, .footer-text {
+      font-family: 'Merriweather', serif;
+      font-weight: 400;
+    }
+    .logo { font-size: 2.2rem; font-weight: 700; letter-spacing: -0.04em; color: var(--ink); }
+    .logo span { color: var(--moss); font-weight: 300; }
+
+    /* ----- navigation (unique: floating bridge) ----- */
+    .nav-bridge {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.2rem 2rem;
+      background: rgba(246, 243, 237, 0.7);
+      backdrop-filter: blur(6px);
+      border-radius: 80px 16px 80px 16px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 3rem;
+      border: 1px solid rgba(91, 122, 92, 0.15);
+    }
+    .nav-links {
+      display: flex;
+      gap: 2.2rem;
+      flex-wrap: wrap;
+    }
+    .nav-link {
+      text-decoration: none;
+      color: var(--ink);
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 0.4rem 0;
+      border-bottom: 2px solid transparent;
+      transition: 0.2s;
+    }
+    .nav-link:hover { border-bottom-color: var(--moss); color: var(--peat); }
+    .nav-utility { display: flex; gap: 1.2rem; align-items: center; }
+
+    /* ----- homepage architecture (layered journal) ----- */
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.8rem;
+      display: flex;
+      align-items: baseline;
+      gap: 0.8rem;
+    }
+    .section-title small {
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: var(--moss);
+      letter-spacing: 0;
+    }
+
+    /* -- 1. editor's compass (hero reimagined) -- */
+    .compass-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 2.5rem;
+      margin-bottom: 4.5rem;
+      background: var(--cream);
+      padding: 2.8rem 3rem;
+      border-radius: var(--radius-soft);
+      box-shadow: var(--shadow-sm);
+      border-left: 8px solid var(--gold);
+    }
+    .compass-text h1 { margin-bottom: 0.8rem; }
+    .compass-text .lead {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: var(--peat);
+      border-left: 4px solid var(--lichen);
+      padding-left: 1.2rem;
+    }
+    .compass-meta { display: flex; gap: 1.5rem; margin-top: 1.5rem; }
+    .pill { background: var(--silk); padding: 0.3rem 1.2rem; border-radius: 40px; font-size: 0.8rem; font-weight: 600; color: var(--peat); }
+    .compass-image {
+      background: #d9d0c0;
+      border-radius: var(--radius-card);
+      min-height: 200px;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300"><rect width="400" height="300" fill="%23b7aa95" /><path d="M80 180 L120 100 L200 140 L300 80 L340 160 L260 220 L160 200 L80 180" fill="%235b7a5c" opacity="0.3"/><circle cx="200" cy="150" r="40" fill="%23b99b6b" opacity="0.2"/><path d="M140 200 L200 240 L260 200" stroke="%234d3e35" stroke-width="6" fill="none"/></svg>');
+      background-size: cover;
+      background-blend-mode: overlay;
+    }
+
+    /* -- 2. knowledge weave (cards with distinct styles) -- */
+    .weave-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-bottom: 4rem;
+    }
+    .weave-card {
+      background: white;
+      padding: 2rem 1.8rem 1.8rem;
+      border-radius: 40px 8px 40px 8px;
+      box-shadow: var(--shadow-sm);
+      transition: 0.2s;
+      border: 1px solid rgba(169, 183, 139, 0.2);
+    }
+    .weave-card:nth-child(2) { border-radius: 8px 40px 8px 40px; background: var(--cream); }
+    .weave-card:nth-child(3) { border-radius: 32px 0 32px 0; background: #ede8de; }
+    .weave-card .card-category {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--moss);
+      border-bottom: 2px solid var(--lichen);
+      display: inline-block;
+      padding-bottom: 0.3rem;
+    }
+    .weave-card h3 { margin: 0.8rem 0 0.5rem; }
+    .weave-card .excerpt { font-size: 0.95rem; color: var(--peat); }
+    .weave-card .meta { font-size: 0.75rem; color: #7a8b7a; margin-top: 0.8rem; }
+
+    /* -- 3. deep dives (featured article) -- */
+    .deep-dive {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 2.5rem;
+      background: var(--silk);
+      padding: 2.8rem 3rem;
+      border-radius: 80px 8px 80px 8px;
+      margin-bottom: 4rem;
+      box-shadow: var(--shadow-md);
+    }
+    .deep-dive .featured-content h2 { margin-bottom: 0.8rem; }
+    .deep-dive .featured-content .byline { font-size: 0.9rem; color: var(--peat); }
+    .deep-dive .featured-image {
+      background: #b8ad96;
+      border-radius: 40px 8px 40px 8px;
+      min-height: 180px;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200"><rect width="400" height="200" fill="%23938570" /><circle cx="100" cy="80" r="40" fill="%23b99b6b" opacity="0.4"/><circle cx="280" cy="120" r="50" fill="%235b7a5c" opacity="0.3"/><path d="M50 160 L200 100 L340 160" stroke="%23e2dcd0" stroke-width="6" fill="none"/></svg>');
+      background-size: cover;
+    }
+
+    /* -- 4. wildthicket library (tables & faq) -- */
+    .library-section {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 2.5rem;
+      margin-bottom: 4rem;
+      background: white;
+      padding: 2rem 2.5rem;
+      border-radius: 12px 60px 12px 60px;
+      box-shadow: var(--shadow-sm);
+    }
+    .library-section table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+    .library-section th {
+      text-align: left;
+      padding: 0.6rem 0.2rem;
+      border-bottom: 2px solid var(--lichen);
+      font-weight: 600;
+    }
+    .library-section td { padding: 0.6rem 0.2rem; border-bottom: 1px solid #ddd; }
+    .faq-block { background: var(--cream); padding: 1.2rem 1.8rem; border-radius: 40px 8px 40px 8px; }
+    .faq-block details { margin: 0.8rem 0; }
+    .faq-block summary { font-weight: 600; cursor: pointer; color: var(--peat); }
+
+    /* -- 5. footer (unique: layered driftwood) -- */
+    .footer-drift {
+      margin-top: 4rem;
+      padding: 2.8rem 2rem 1.8rem;
+      background: #1e2a2b;
+      color: #d4d9d0;
+      border-radius: 80px 0 80px 0;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 2rem;
+    }
+    .footer-drift a { color: #b7c9b2; text-decoration: none; border-bottom: 1px dotted #5b7a5c; }
+    .footer-drift .logo { color: #e2dcd0; }
+    .footer-drift .logo span { color: #a9b78b; }
+    .footer-links { display: flex; flex-direction: column; gap: 0.4rem; }
+    .footer-links a { border-bottom: 0; }
+
+    /* responsive */
+    @media (max-width: 800px) {
+      .compass-grid, .deep-dive, .library-section { grid-template-columns: 1fr; }
+      .weave-grid { grid-template-columns: 1fr; }
+      .footer-drift { grid-template-columns: 1fr 1fr; }
+      .nav-bridge { flex-direction: column; gap: 1rem; align-items: flex-start; }
+    }
+    @media (max-width: 500px) {
+      .footer-drift { grid-template-columns: 1fr; }
+      h1 { font-size: 2.4rem; }
+    }
+
+    /* extra: utility */
+    .mt-1 { margin-top: 1rem; }
+    .text-small { font-size: 0.8rem; color: var(--peat); }
+    .btn-outline {
+      border: 1px solid var(--moss);
+      padding: 0.4rem 1.2rem;
+      border-radius: 40px;
+      background: transparent;
+      font-weight: 600;
+      color: var(--moss);
+      text-decoration: none;
+    }
+    .btn-outline:hover { background: var(--moss); color: white; }
+
+    /* sitemap / pages inline */
+    .page-links { display: flex; flex-wrap: wrap; gap: 1rem 2rem; margin-top: 0.8rem; }
+    .page-links a { color: var(--moss); text-decoration: none; border-bottom: 1px dotted var(--lichen); }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- nav bridge (unique) -->
+  <nav class="nav-bridge">
+    <div class="logo">Kaldorin<span>Wildthicket Residence</span></div>
+    <div class="nav-links">
+      <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="terms.html">Terms Of Privacy</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+					<li><a href="cookies.html">Cookies Policy</a></li>
+					 <li><a href="categories.html">CATEGORIES</a></li>
+					<li><a href="disclamier.html">DISCLAMIER</a></li>
+    </div>
+  </nav>
+
+  <!-- 1. compass (hero alternative) -->
+  <section class="compass-grid">
+    <div class="compass-text">
+      <h1>the cultivator’s compass</h1>
+      <div class="lead">Where ancient wisdom meets modern soil · a journal for the hands-on gardener.</div>
+      <div class="compass-meta">
+        <span class="pill">featured</span>
+        <span class="pill">roots &amp; resilience</span>
+        <span class="pill">6 min read</span>
+      </div>
+      <p style="margin-top: 1.2rem; font-size: 0.95rem;">In the shade of the old oak, we learn that gardening is not a battle but a conversation. This season, we explore the quiet art of companion planting and the mycelial networks beneath our feet.</p>
+      <a href="#" class="btn-outline" style="display: inline-block; margin-top: 1.2rem;">Continue reading →</a>
+    </div>
+    <div class="compass-image"></div>
+  </section>
+
+  <!-- 2. knowledge weave (cards with different styles) -->
+  <div class="section-title">🌱 threads of knowledge <small>– handpicked for the wild at heart</small></div>
+  <div class="weave-grid">
+    <div class="weave-card">
+      <div class="card-category">soil · ecology</div>
+      <h3>living soil: the fungal highway</h3>
+      <div class="excerpt">Beneath every thriving garden lies a network of mycelium that connects roots, shares nutrients, and whispers warnings.</div>
+      <div class="meta">by E. Thorne · 12 min</div>
+    </div>
+    <div class="weave-card">
+      <div class="card-category">design · permaculture</div>
+      <h3>forest garden layers</h3>
+      <div class="excerpt">From canopy to root zone: a guide to designing edible landscapes that mimic nature’s own architecture.</div>
+      <div class="meta">by M. Rivers · 9 min</div>
+    </div>
+    <div class="weave-card">
+      <div class="card-category">seasons · phenology</div>
+      <h3>when the lilac blooms</h3>
+      <div class="excerpt">The old farmer’s almanac was right: nature’s calendar is more reliable than any app. Learn to read the signs.</div>
+      <div class="meta">by C. Finch · 7 min</div>
+    </div>
+  </div>
+
+  <!-- 3. deep dive (featured article) -->
+  <section class="deep-dive">
+    <div class="featured-content">
+      <span class="pill" style="background: var(--gold); color: white;">featured article</span>
+      <h2>the art of the wild border</h2>
+      <div class="byline">by Helena Kaldorin · 18 June 2026</div>
+      <p style="margin: 1rem 0; font-size: 1rem; line-height: 1.7;">A border is not a line; it is a transition. In this deep dive, we dissect the principles of layered edges — where meadow meets garden, and chaos becomes a canvas. We explore how to blend native perennials with ornamental grasses to create a border that hums with life across all seasons.</p>
+      <ul style="margin-left: 1.2rem; color: var(--peat);">
+        <li>Why edges are the most productive zone in your garden</li>
+        <li>Plant combinations that dazzle and support pollinators</li>
+        <li>Maintenance rhythms for a “wild” look that feels intentional</li>
+      </ul>
+      <a href="#" class="btn-outline" style="margin-top: 1rem;">read the full essay →</a>
+    </div>
+    <div class="featured-image"></div>
+  </section>
+
+  <!-- 4. library & faq (comparison + table) -->
+  <section class="library-section">
+    <div>
+      <h3 style="font-size: 1.4rem;">📚 wildthicket compendium</h3>
+      <p class="text-small">a comparison of organic amendments</p>
+      <table>
+        <tr><th>amendment</th><th>N-P-K</th><th>release</th></tr>
+        <tr><td>compost</td><td>1-1-1</td><td>slow</td></tr>
+        <tr><td>bone meal</td><td>3-15-0</td><td>moderate</td></tr>
+        <tr><td>kelp meal</td><td>1-0-2</td><td>fast</td></tr>
+        <tr><td>alfalfa meal</td><td>3-1-2</td><td>moderate</td></tr>
+      </table>
+      <div style="margin-top: 1.2rem; background: #ede8de; padding: 0.8rem 1.2rem; border-radius: 30px 4px 30px 4px;">
+        <span style="font-weight: 600;">📌 expert tip:</span> Always combine slow and fast release amendments for a balanced soil feast.
+      </div>
+    </div>
+    <div class="faq-block">
+      <h4 style="font-weight: 600; margin-bottom: 0.6rem;">❓ root questions</h4>
+      <details><summary>How often should I water deep?</summary><p style="font-size: 0.9rem; margin-top: 0.3rem;">Water deeply 1-2 times per week, depending on soil type. Aim for 1 inch per week, including rainfall.</p></details>
+      <details><summary>Is crop rotation necessary in small gardens?</summary><p style="font-size: 0.9rem; margin-top: 0.3rem;">Absolutely. Even in raised beds, rotation prevents nutrient depletion and disrupts pest cycles.</p></details>
+      <details><summary>What’s the best mulch?</summary><p style="font-size: 0.9rem; margin-top: 0.3rem;">Shredded leaves or straw are excellent; they break down slowly and feed the soil food web.</p></details>
+    </div>
+  </section>
+
+  <!-- 5. footer driftwood (unique) -->
+  <footer class="footer-drift">
+    <div>
+      <div class="logo">Kaldorin<span>Wildthicket</span></div>
+      <p style="font-size: 0.85rem; margin-top: 0.5rem; max-width: 260px;">A sanctuary for those who garden with their senses. Handcrafted content, minimal imagery, maximum wisdom.</p>
+      <div style="margin-top: 1rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+        <span>📍 rooted in the wild</span>
+        <span>✉️ cultivate@wildthicket.com</span>
+      </div>
+    </div>
+    <div class="footer-links">
+      <span style="font-weight: 600; color: #cbd9c0;">Pages</span>
+      <a href="#">Home</a><a href="#">Blog</a><a href="#">Categories</a><a href="#">About</a><a href="#">Contact</a>
+    </div>
+    <div class="footer-links">
+      <span style="font-weight: 600; color: #cbd9c0;">Legal</span>
+      <a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a><a href="#">Disclaimer</a><a href="#">Editorial Policy</a>
+    </div>
+    <div class="footer-links">
+      <span style="font-weight: 600; color: #cbd9c0;">Archive</span>
+      <a href="#">Authors</a><a href="#">Resources</a><a href="#">FAQ</a><a href="#">Sitemap</a>
+      <span style="font-size: 0.7rem; color: #7a8f7a; margin-top: 0.5rem;">© 2026 Kaldorin Wildthicket</span>
+    </div>
+  </footer>
+
+  <!-- extra inline pages (sitemap style) -->
+  <div style="margin-top: 1.8rem; padding: 0.6rem 0; border-top: 2px solid var(--silk); display: flex; flex-wrap: wrap; gap: 0.8rem 1.8rem; font-size: 0.75rem;">
+    <span>📄 sitemap: </span>
+    <a href="#" style="color: var(--moss);">Home</a>
+    <a href="#" style="color: var(--moss);">Blog</a>
+    <a href="#" style="color: var(--moss);">Categories</a>
+    <a href="#" style="color: var(--moss);">About</a>
+    <a href="#" style="color: var(--moss);">Contact</a>
+    <a href="#" style="color: var(--moss);">Privacy</a>
+    <a href="#" style="color: var(--moss);">Terms</a>
+    <a href="#" style="color: var(--moss);">Cookie Policy</a>
+    <a href="#" style="color: var(--moss);">Disclaimer</a>
+    <a href="#" style="color: var(--moss);">Editorial Policy</a>
+    <a href="#" style="color: var(--moss);">Authors</a>
+    <a href="#" style="color: var(--moss);">Archive</a>
+    <a href="#" style="color: var(--moss);">Resources</a>
+    <a href="#" style="color: var(--moss);">FAQ</a>
+    <a href="#" style="color: var(--moss);">Sitemap</a>
+  </div>
+
+</div>
+<!-- end container -->
+</body>
+</html>
